@@ -1,5 +1,19 @@
 body {
     background-image: url("Images/background.svg");
     background-size: cover;
+}
 
+.diamonds {
+	position: absolute;
+	right: 5%;
+}
+
+.coins {
+	position: absolute;
+	right: 10%;
+}
+
+.select_classes {
+	position: absolute;
+	right: 0%;
 }

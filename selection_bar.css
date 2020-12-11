@@ -1,6 +1,6 @@
 /* the selected one in the selection bar */
 
-.select {
+.select_classes {
   display:flex;
   flex-direction: column;
   position:relative;
@@ -51,7 +51,7 @@
   background: #E8E8E8;
 }*/
  
-.select:focus .option {
+.select_classes:focus .option {
   position:relative;
   pointer-events:all;
 }
