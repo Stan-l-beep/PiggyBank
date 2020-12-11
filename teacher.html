@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="bootstrap.css">
 	<link rel="stylesheet" href="style.css">
-
+	<link rel="stylesheet" href="selection_bar.css">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -19,11 +19,14 @@
 	</script>
 
 
-	<title>PiggyBank - student</title>
+	<title>PiggyBank - teacher</title>
 </head>
 
 
 <body>
+
+<!-- Coins & Diamonds -->
+
 <div class=".container-fluid">
 <div class="currencies">
 	<div class="diamonds">
@@ -36,7 +39,21 @@
 	</div>
 </div>
 </div>
-    
+
+<!-- Selection bar - Select between classes -->
+
+<div class="select" tabindex="1">
+  <input class="options-select" name="selectors" type="radio" id="opt1" checked>
+  <label for="opt1" class="option">Brain Dancer</label>
+  <input class="options-select" name="selectors" type="radio" id="opt2">
+  <label for="opt2" class="option">Influencer</label>
+  <input class="options-select" name="selectors" type="radio" id="opt3">
+  <label for="opt3" class="option">Hacker</label>
+ </div>
+
+ <!-- History for teacher -->
+
+
 </body>
 
 </html>
