@@ -1,19 +1,34 @@
-body {
-    background-image: url("Images/background.svg");
-    background-size: cover;
-}
-
-.diamonds {
-	position: absolute;
-	right: 5%;
-}
-
-.coins {
-	position: absolute;
-	right: 10%;
-}
-
-.select {
-	position: absolute;
-	right: 0%;
-}
+    .happy .rich {
+        display: none;
+    }
+    /* remove this when js starts*/
+    
+    body {
+        background-image: url("Images/background.svg");
+        background-size: cover;
+    }
+    
+    .diamonds {
+        position: absolute;
+        right: 5%;
+    }
+    
+    .coins {
+        position: absolute;
+        right: 10%;
+    }
+    
+    .select {
+        position: absolute;
+        right: 0%;
+    }
+    
+    .piggies {
+        margin: 20px;
+        border: 1px
+    }
+    
+    .pig {
+        width: 388px;
+        height: 469.5px;
+    }
