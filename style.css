@@ -21,8 +21,8 @@ body {
 .ammount {
     top: 70px;
     float: right;
-    width: 10%;
-    margin-left: 4.5%;
+    margin-left: 7%;
+    margin-right: 2.5px;
 }
 
 header,
@@ -32,15 +32,10 @@ main {
     padding: 30px;
 }
 
-.select {
-    position: absolute;
-    right: 0%;
-}
-
 .Piggies {
     position: relative;
     top: 100px;
-    left: 60%;
+    left: 59.5%;
     width: 28%;
     height: 37%;
 }
