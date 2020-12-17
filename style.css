@@ -1,49 +1,146 @@
-    .happy .rich {
-        display: none;
-    }
-    /* remove this when js starts*/
-    
-    body {
-        background-image: url("Images/background.svg");
-        background-size: cover;
-    }
-    
-    .container-fluid {
-        padding-left: 200px !important;
-        padding-right: 200px !important;
-        padding-top: 50px;
-    }
-    
-    .currentScore {
-        width: 5%;
-        height: 5%;
-    }
-    
-    .diamonds {
-        width: 2%;
-        height: 2%;
-        position: absolute;
-        right: 10%;
-    }
-    
-    .coins {
-        width: 2%;
-        height: 2%;
-        position: absolute;
-        right: 15%;
-    }
-    
-    .select {
-        position: absolute;
-        right: 0%;
-    }
-    
-    .piggies {
-        margin: 20px;
-        border: 1px
-    }
-    
-    .pigimg {
-        width: 33%;
-        height: 42%;
-    }
+/*styling of student*/
+
+body {
+    background-image: url("Images/background.svg");
+    background-size: cover;
+}
+
+.container-fluid {
+    padding-left: 200px !important;
+    padding-right: 200px !important;
+    padding-top: 50px;
+}
+
+.currentScore {
+    position: relative;
+    top: 60px;
+    left: 80%;
+    width: 50%;
+    height: 50%;
+}
+
+.currencyImg {
+    float: left;
+    width: 5%;
+    height: 5%;
+    margin-left: 5%;
+}
+
+.ammount {
+    top: 70px;
+    float: left;
+    width: 5%;
+    height: 5%;
+    margin-left: 5%;
+}
+
+header,
+main {
+    display: block;
+    /* because <main/> is very new */
+    padding: 30px;
+}
+
+.select {
+    position: absolute;
+    right: 0%;
+}
+
+.Piggies {
+    position: relative;
+    top: 100px;
+    left: 60%;
+    width: 28%;
+    height: 37%;
+}
+
+.pigimg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*styiling of the select buttons*/
+
+.history_overview_buttons {
+    position: absolute;
+    left: 10.5%;
+    top: 130px;
+}
+
+.button {
+    color: #000;
+    border: 3px solid #F5F5F5;
+    background-color: #F5F5F5;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    outline-color: #F5F5F5;
+}
+
+.button:hover {
+    background-position: 100%;
+    border: 3px solid #E8E8E8;
+    background-color: #E8E8E8;
+    color: #000;
+}
+
+
+/*styiling of history and student list*/
+
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Zilla+Slab:300,400');
+$white: #fff;
+$main-color: #643A7A;
+.frame {
+    position: absolute;
+    border-radius: 2px;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
+    background: #fff;
+    color: #497081;
+    font-family: 'zilla slab', serif;
+    font-size: .9rem;
+}
+
+.list {
+    position: absolute;
+    top: 32%;
+    left: 10.5%;
+    background: #F5F5F5;
+    box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.list .head {
+    padding: 20px 0;
+    margin: 0 30px;
+    border-bottom: 1px solid rgba(100, 58, 122, .5);
+}
+
+.list .title {
+    font-family: 'fredericka the great', cursive;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: rgba(100, 58, 122, .8);
+}
+
+.list ul {
+    list-style: none;
+    padding: 4px 0;
+    margin: 0 30px;
+    font-weight: 300;
+}
+
+.list ul li {
+    position: relative;
+    display: block;
+    margin: 24px 0;
+    height: 14px;
+}
+
+.list ul .text {
+    float: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}

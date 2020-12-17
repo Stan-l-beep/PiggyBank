@@ -9,41 +9,82 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="JS/openscreen.js"></script>
 
     <title>PiggyBank - student</title>
 </head>
 
 
 <body>
-    <!-- begin class with all currencies -->
-    <div class="currentScore container-fluid">
-        <div class="diamonds">
-            <img src="Images/diamond.svg" alt="image of a diamond">
-            <h2>25</h2>
+
+    <!-- Buttons for selecting history or overview screen -->
+    <div class="history_overview_buttons">
+        <button class="history_overview_buttons-item button" onclick="openScreen('History')">History</button>
+        <button class="history_overview_buttons-item button" onclick="openScreen('Overview')">Overview</button>
+    </div>
+    <!-- BUTTON SECTION END -->
+
+    <!-- HISTORY BUTTON SECTION -->
+    <div id="History" class="container screen">
+        <div class="frame">
+            <div class="list">
+                <div class="head">
+                    <div class="title">Your history</div>
+                </div>
+                </br>
+                <ul>
+                    <li>
+                        <label>Information from your history!</label>
+                    </li>
+                    <li>
+                        <label>Information from your history!</label>
+                    </li>
+                    <li>
+                        <label>Information from your history!</label>
+                    </li>
+                    <li>
+                        <label>Information from your history!</label>
+                    </li>
+                    <li>
+                        <label>Information from your history!</label>
+                    </li>
+                    </br>
+                </ul>
+            </div>
         </div>
-        <div class="coins">
-            <img src="Images/coin.svg" alt="image of a coin">
-            <h2>75</h2>
-        </div>
+    </div>
+    <!-- END OF HISTORY BUTTON SECTION -->
+
+    <!-- start class with all currencies -->
+    <div class="currentScore">
+        <header>
+            <div class="currencyImg">
+                <img src="Images/diamond.svg" alt="image of a diamond">
+            </div>
+            <div class="currencyImg">
+                <img src="Images/coin.svg" alt="image of a coin">
+            </div>
+        </header>
+
+        <main>
+            <div class="ammount">
+                <h2>75</h2>
+            </div>
+            <div class="ammount">
+                <h2>25</h2>
+            </div>
+        </main>
     </div>
     <!-- end class with all currencies -->
 
     <!-- begin class with all piggies -->
-    <div class=" Piggies container-fluid">
+    <div class="Piggies">
         <div class="sad pigimg ">
             <img src="Images/sadPig.svg " alt="image of a crying pig ">
         </div>
-        <!-- <div class="happy pig ">
-                <img src="Images/happyPig.svg " alt="image of a happy pig with coins around them ">
-            </div>
-            <div class="rich pig ">
-                <img src="Images/richPig.svg " alt="image of a pig with a crown and a staff ">
-            </div> -->
     </div>
     <!-- end class with all currencies -->
 
