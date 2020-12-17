@@ -8,14 +8,29 @@
         background-size: cover;
     }
     
+    .container-fluid {
+        padding-left: 200px !important;
+        padding-right: 200px !important;
+        padding-top: 50px;
+    }
+    
+    .currentScore {
+        width: 5%;
+        height: 5%;
+    }
+    
     .diamonds {
+        width: 2%;
+        height: 2%;
         position: absolute;
-        right: 5%;
+        right: 10%;
     }
     
     .coins {
+        width: 2%;
+        height: 2%;
         position: absolute;
-        right: 10%;
+        right: 15%;
     }
     
     .select {
@@ -28,7 +43,7 @@
         border: 1px
     }
     
-    .pig {
-        width: 388px;
-        height: 469.5px;
+    .pigimg {
+        width: 33%;
+        height: 42%;
     }
