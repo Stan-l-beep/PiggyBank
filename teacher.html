@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -8,6 +7,7 @@
 	<link rel="stylesheet" href="bootstrap.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="selection_bar.css">
+	<link rel="stylesheet" href="student_list.css">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -26,7 +26,6 @@
 <body>
 
 <!-- Coins & Diamonds -->
-
 <div class=".container-fluid">
 <div class="currencies">
 	<div class="diamonds">
@@ -40,19 +39,138 @@
 </div>
 </div>
 
+<!-- The image of the pig-->
+<div class="Piggies">
+	<div class="teacher_pig">
+        <img src="Images/teacherPig.svg" alt="image of a professor pig">
+    </div>
+</div>
+
+<!-- Buttons for selecting the ATM or History screen -->
+<div class="atm_history_buttons">
+  <button class="atm_history_buttons-item button" onclick="openScreen('ATM')">ATM</button>
+  <button class="atm_history_buttons-item button" onclick="openScreen('History')">History</button>
+</div>
+
+<!-- ATM BUTTON SECTION -->
+<div id="ATM" class="container screen">
+  
 <!-- Selection bar - Select between classes -->
-<div class="select" tabindex="1">
-  <input class="options-select" name="selectors" type="radio" id="opt1" checked>
-  <label for="opt1" class="option">Brain Dancer</label>
-  <input class="options-select" name="selectors" type="radio" id="opt2">
-  <label for="opt2" class="option">Influencer</label>
-  <input class="options-select" name="selectors" type="radio" id="opt3">
-  <label for="opt3" class="option">Hacker</label>
- </div>
+	<div class="select" tabindex="1">
+  		<input class="options-select" name="selectors" type="radio" id="opt1" checked>
+  			<label for="opt1" class="option">Brain Dancer</label>
+  		<input class="options-select" name="selectors" type="radio" id="opt2">
+  			<label for="opt2" class="option">Influencer</label>
+  		<input class="options-select" name="selectors" type="radio" id="opt3">
+  			<label for="opt3" class="option">Hacker</label>
+ 	</div>
 
- <!-- History for teacher -->
+<!-- Student list -->
+	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Student list</div>
+			</div>
+			<ul>
+				<li>
+					<input type="checkbox" id="item-1" name="item-1">
+					<label for="item-1" class="text">Peter Lajos</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-2" name="item-2">
+					<label for="item-2" class="text">Jenny Tran</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-3" name="item-3">
+					<label for="item-3" class="text">Stanimir Danev</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-4" name="item-4">
+					<label for="item-4" class="text">Kaloyan Madzhunov</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-5" name="item-5">
+					<label for="item-5" class="text">Marina Lazarova</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-6" name="item-6">
+					<label for="item-6" class="text">Nicky Döll</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-7" name="item-7">
+					<label for="item-7" class="text">Anna Schneider</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-8" name="item-8">
+					<label for="item-8" class="text">Le Le</label>
+				</li>
+			</ul>
+  		</div>
+	</div>
 
+<!-- Boxes for define the amount of coins/diamonds you want to give for the selected students -->
+	<div class="amountOfDiamonds">
+		<h2>Diamonds</h2>
+		<div class="diamondInput">
+			<input type="number" id="amountOfD" name="amountOfD">
+		</div>
+	</div>
+	<div class="amountOfCoins">
+		<h2>Coins</h2>
+		<div class="coinInput">
+			<input type="number" id="amountOfC" name="amountOfC">
+		</div>
+	</div>
+
+<!-- Buttons for Deposit, Withdraw and Request -->
+	<div>
+		<button class="deposit button">Deposit</button>
+  		<button class="withdraw button">Withdraw</button>
+  		<button class="request button">Request funds</button>
+	</div>
+</div>
+<!-- END OF ATM BUTTON SECTION -->
+
+<!-- HISTORY BUTTON SECTION -->
+<div id="History" class="container screen" style="display:none">
+  	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Your history</div>
+			</div>
+			</br>
+			<li>
+				<label>Information from your history!</label>
+			</li>
+			<li>
+				<label>Information from your history!</label>
+			</li>
+			<li>
+				<label>Information from your history!</label>
+			</li>
+			<li>
+				<label>Information from your history!</label>
+			</li>
+			<li>
+				<label>Information from your history!</label>
+			</li>
+			</br>
+		</div>
+	</div>
+</div>
+<!-- END OF HISTORY BUTTON SECTION -->
+
+<!-- Script for changing between the ATM and History tab -->
+<script>
+function openScreen(screenName) {
+  var i;
+  var x = document.getElementsByClassName("screen");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(screenName).style.display = "block";  
+}
+</script>
 
 </body>
-
 </html>

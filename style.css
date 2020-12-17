@@ -15,5 +15,75 @@ body {
 
 .select {
 	position: absolute;
-	right: 0%;
+	left: 10%;
+	top: 150px;
+}
+
+.atm_history_buttons{
+	position: absolute;
+	left: 10.5%;
+	top: 130px;
+}
+
+.button{
+	color: #000;
+  	border: 3px solid #F5F5F5;
+  	background-color: #F5F5F5;
+  	text-align: center;
+  	color: #000;
+  	cursor: pointer;
+  	display: inline-block;
+  	outline-color: #F5F5F5;
+}
+
+.button:hover {
+  background-position: 100%;
+  border: 3px solid #E8E8E8;
+  background-color: #E8E8E8;
+  color: #000;
+}
+
+.teacher_pig {
+    margin: 20px;
+    border: 1px;
+    width: 388px;
+    height: 469.5px;
+    position: absolute;
+    left: 65%;
+    top: 20%;
+}
+    
+.pig {
+    width: 388px;
+    height: 469.5px;
+}
+
+.amountOfDiamonds {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+}
+
+.amountOfCoins {
+	position: absolute;
+	top: 30%;
+	left: 55%;
+}
+
+.deposit {
+	position: absolute;
+	top: 50%;
+	left: 40%;
+}
+
+.withdraw {
+	position: absolute;
+	top: 55%;
+	left: 40%;
+}
+
+.request {
+	position: absolute;
+	top: 70%;
+	left: 40%;
 }

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Zilla+Slab:300,400');
+$white: #fff;
+$main-color: #643A7A;
+
+.frame {
+	position: absolute;
+	border-radius: 2px;
+	box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
+	background: #fff;
+	color: #497081;
+	font-family: 'zilla slab', serif;
+	font-size: .9rem;
+}
+
+.list {
+  	position: absolute;
+	top: 32%;
+	left: 10.5%;
+  	background: #F5F5F5;
+  	box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.15);
+  	border-radius: 3px;
+}
+
+.list .head {
+  	padding: 20px 0;
+  	margin: 0 30px;
+  	border-bottom: 1px solid rgba(100, 58, 122, .5);
+}
+
+.list .title {
+	font-family: 'fredericka the great', cursive;
+  	font-weight: 500;
+	font-size: 2.5rem;
+	color: rgba(100, 58, 122, .8);
+}
+
+.list ul {
+  	list-style: none;
+  	padding: 4px 0;
+  	margin: 0 30px;
+	font-weight: 300;
+}
+
+.list ul li {
+	position: relative;
+	display: block;
+	margin: 24px 0;
+	height: 14px;
+}
+
+.list ul .text {
+  	float: left;
+  	font-size: 1rem;
+  	cursor: pointer;
+  	transition: all .3s ease-in-out;
+}
