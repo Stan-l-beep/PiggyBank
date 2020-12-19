@@ -1,5 +1,11 @@
 /*styling of student*/
-
+p {
+    display: block;
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 body {
     background-image: url("Images/background.svg");
     background-size: cover;
@@ -22,14 +28,15 @@ body {
     top: 70px;
     float: right;
     margin-left: 7%;
-    margin-right: 2.5px;
+    margin-right: 1.2%;
+    font-size: 1.8vw;
 }
 
 header,
 main {
     display: block;
     /* because <main/> is very new */
-    padding: 30px;
+    padding: 5%;
 }
 
 .Piggies {
@@ -47,6 +54,11 @@ main {
 
 
 /*styiling of the select buttons*/
+.overview_overview_buttons {
+    position: absolute;
+    left: 10.5%;
+    top: 200px;
+}
 
 .history_overview_buttons {
     position: absolute;
@@ -55,22 +67,14 @@ main {
 }
 
 .button {
-    color: #000;
-    border: 3px solid #F5F5F5;
-    background-color: #F5F5F5;
+    color: inherit;
+    border:none;
     text-align: center;
-    color: #000;
-    cursor: pointer;
     display: inline-block;
-    outline-color: #F5F5F5;
+    background: none;
 }
 
-.button:hover {
-    background-position: 100%;
-    border: 3px solid #E8E8E8;
-    background-color: #E8E8E8;
-    color: #000;
-}
+
 
 
 /*styiling of history and student list*/
@@ -90,8 +94,9 @@ $main-color: #643A7A;
 
 .list {
     position: absolute;
-    top: 32%;
+    top: 200px;
     left: 10.5%;
+    width: 35vmax;
     background: #F5F5F5;
     box-shadow: 1rem 1rem .5rem rgba(0, 0, 0, 0.15);
     border-radius: 3px;
