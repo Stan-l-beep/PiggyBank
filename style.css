@@ -10,7 +10,7 @@ body {
     background-image: url("Images/background.svg");
     background-size: cover;
 }
-
+/*all scoring styling is here */
 .currentScore {
     position: absolute;
     top: 60px;
@@ -38,7 +38,9 @@ main {
     /* because <main/> is very new */
     padding: 5%;
 }
+/*all scoring styling ends here*/
 
+/*styling of pigs*/
 .Piggies {
     position: absolute;
     top: 200px;
@@ -58,7 +60,7 @@ main {
     width: 100%;
     height: 100%;
 }
-
+/*styling of pigs end*/
 
 /*styiling of the select buttons*/
 .overview_overview_buttons {
@@ -81,6 +83,68 @@ main {
     background: none;
 }
 
+/*tooltips*/
+.tooltip {
+    position: relative;; /* making the .tooltip span a container for the tooltip text */
+    left:-4%;
+    top: 5px;
+  }
+  .tooltip img{
+width: 3%;
+  }
+
+  
+
+
+  .tooltip:before {
+    content: attr(data-text); /* here's the magic */
+    position:absolute;
+    
+    
+    /* vertically center */
+    top:50%;
+    transform:translateY(-50%);
+    
+    /* move to right */
+    left:100%;
+    margin-left:15px; /* and add a small left margin */
+    
+    /* basic styles */
+    width:200px;
+    padding:10px;
+    border-radius:10px;
+    background:#000;
+    color: #fff;
+    text-align:center;
+    opacity:0;
+    transition: 0.7s opacity;    /* hide by default */
+  }
+  .tooltip:hover:before {
+    display:block;
+    opacity: 1;
+  }
+  .tooltip:after {
+    content: "";
+    position:absolute;
+    
+    /* position tooltip correctly */
+    left:100%;
+    margin-left:-5px;
+   
+    /* vertically center */
+    top:50%;
+    transform:translateY(-50%);
+   
+    /* the arrow */
+    border:10px solid #000;
+    border-color: transparent black transparent transparent;
+    
+    opacity:0;
+  transition:.3s;
+  }
+  .tooltip:hover:before, .tooltip:hover:after {
+    opacity:1;
+  }
 
 
 
@@ -142,3 +206,4 @@ $main-color: #643A7A;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
+/*styiling of history and student list end*/
