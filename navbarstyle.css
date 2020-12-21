@@ -1,0 +1,82 @@
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+strong {
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  flex-dirction: row;
+}
+nav a {
+  width: 5%;
+  text-align: center;
+  padding: 25px 20px;
+  text-decoration: none;
+  position: relative;
+  color: rgba(0, 0, 0, 0.3);
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+nav a:hover, nav a.active {
+  color: #000;
+}
+nav a:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #000;
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -4px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+  transition: transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+}
+nav a.active:after {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}

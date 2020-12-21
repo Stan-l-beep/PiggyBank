@@ -2,55 +2,63 @@
 <html lang="en">
 <head>
 	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="bootstrap.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="selection_bar.css">
-	<link rel="stylesheet" href="student_list.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./navbarstyle.css">
+    <!-- jQuery first, then Popper.js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="JS/openscreen.js"></script>
+    <script  src="JS/navbarscript.js"></script>
 
-
-	<title>PiggyBank - teacher</title>
+    <title>PiggyBank - teacher</title>
 </head>
 
 
 <body>
 
-<!-- Coins & Diamonds -->
-<div class=".container-fluid">
-<div class="currencies">
-	<div class="diamonds">
-		<img src="Images/diamond.svg" alt="image of a diamond" width="30" height="30">
-		<h2>25</h2>
-	</div>
-	<div class="coins">
-		<img src="Images/coin.svg" alt="image of a coin" width="30" height="30">
-		<h2>75</h2>
-	</div>
-</div>
-</div>
+<!-- start class with all currencies -->
+    <div class="currentScore">
+        <header>
+            <div class="currencyImg">
+                <img src="Images/diamond.svg" alt="image of a diamond">
+            </div>
+            <div class="currencyImg">
+                <img src="Images/coin.svg" alt="image of a coin">
+            </div>
+        </header>
 
-<!-- The image of the pig-->
-<div class="Piggies">
-	<div class="teacher_pig">
-        <img src="Images/teacherPig.svg" alt="image of a professor pig">
+        <main>
+            <div class="ammount">
+                <p>75</p>
+            </div>
+            <div class="ammount">
+                <p>25</p>
+            </div>
+        </main>
     </div>
-</div>
+    <!-- end class with all currencies -->
+
+<!-- begin class with teacher pig image -->
+    <div class="Piggies">
+        <div class="teacher pigimg ">
+            <img src="Images/teacherPig.svg " alt="image of the teacher Pig ">
+        </div>
+    </div>
+    <!-- end class with teacher pig image -->
 
 <!-- Buttons for selecting the ATM or History screen -->
-<div class="atm_history_buttons">
-  <button class="atm_history_buttons-item button" onclick="openScreen('ATM')">ATM</button>
-  <button class="atm_history_buttons-item button" onclick="openScreen('History')">History</button>
-</div>
+   <nav role="navigation">
+    <div class="atm_history_buttons">
+        <button class="atm_history_buttons-item button" onclick="openScreen('ATM')"><a data-page="home" class="active" href="#">ATM</a></button>
+        <span data-text="At ATM you can give and get coins from students." class="tooltip"><img src="Images/infoicon.svg"></span>
+        <button class="atm_history_buttons-item button" onclick="openScreen('History')"><a data-page="about" href="#">History</a></button>
+        <span data-text="At history you can see all of your purchases made for this year." class="tooltip"><img src="Images/infoicon.svg"></span>
+    </div>
+    </nav>
+ <!-- BUTTON SECTION END -->
 
 <!-- ATM BUTTON SECTION -->
 <div id="ATM" class="container screen">
@@ -108,7 +116,7 @@
   		</div>
 	</div>
 
-<!-- Boxes for define the amount of coins/diamonds you want to give for the selected students -->
+<!-- Boxes for define courses and the amount of coins/diamonds you want to give for the selected students -->
 	<div class="amountOfDiamonds">
 		<h2>Diamonds</h2>
 		<div class="diamondInput">
@@ -121,13 +129,21 @@
 			<input type="number" id="amountOfC" name="amountOfC">
 		</div>
 	</div>
+	<div class="courseName">
+		<h2>Course</h2>
+		<div class="courseNameInput">
+			<input type="text" id="courseName" name="courseName">
+		</div>
+	</div>
 
 <!-- Buttons for Deposit, Withdraw and Request -->
-	<div>
-		<button class="deposit button">Deposit</button>
-  		<button class="withdraw button">Withdraw</button>
-  		<button class="request button">Request funds</button>
-	</div>
+	<nav>
+		<div>
+			<button class="deposit button"><a>Deposit</a></button>
+  			<button class="withdraw button"><a>Withdraw</a></button>
+  			<button class="request button"><a>Request funds</a></button>
+		</div>
+	</nav>
 </div>
 <!-- END OF ATM BUTTON SECTION -->
 
