@@ -72,6 +72,56 @@ main {
     background: none;
 }
 
+/*Buttons for the index.html*/
+.buttonsForIndex {
+	display: flex;
+  	flex-dirction: row;
+}
+
+.buttonsForIndex a {
+  left:50%;
+  top:50%;
+  padding: 25px 20px;
+  font-size:30px;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  display: inline-block;
+}
+
+.buttonsForIndex a:hover, nav a.active {
+  color: #000;
+}
+
+.teacher_button {
+	color: inherit;
+    border:none;
+    text-align: center;
+    display: inline-block;
+    background: none;
+}
+
+.student_button {
+	color: inherit;
+    border:none;
+    text-align: center;
+    display: inline-block;
+    background: none;
+}
+
+.admin_button{
+	color: inherit;
+    border:none;
+    text-align: center;
+    display: inline-block;
+    background: none;
+}
+/*End of the buttons for index.html*/
+
 /*styling of the part where you put the course name and the amount of coins and diamonds what you want to give/get*/
 
 .courseName {
