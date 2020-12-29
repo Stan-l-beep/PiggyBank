@@ -52,25 +52,20 @@ main {
 
 /*styling of the part where you put the course name and the amount of coins and diamonds what you want to give/get*/
 
-.amountOfDiamonds {
+.nameOfStudent {
 	position: absolute;
 	top: 20%;
 	left: 33%;
 }
 
-.amountOfCoins {
-	position: absolute;
-	top: 20%;
-	left: 45%;
-}
-
-.deposit {
+.addStudent {
 	position: absolute;
 	top: 35%;
 	left: 31.5%;
 }
 
-.withdraw {
+.remove,
+.deposit {
 	position: absolute;
 	top: 40%;
 	left: 31.5%;
