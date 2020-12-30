@@ -64,7 +64,7 @@ main {
 	left: 31.5%;
 }
 
-.remove,
+.removeStudent,
 .deposit {
 	position: absolute;
 	top: 40%;
@@ -174,14 +174,14 @@ $main-color: #643A7A;
     color: rgba(100, 58, 122, .8);
 }
 
-.list ul {
+.list table, ul{
     list-style: none;
     padding: 4px 0;
     margin: 0 30px;
     font-weight: 300;
 }
 
-.list ul li {
+.list table tr, ul li {
     position: relative;
     display: block;
     margin: 24px 0;

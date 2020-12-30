@@ -51,40 +51,32 @@
 			<div class="head">
 				<div class="title">Student list</div>
 			</div>
-			<ul>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Peter Lajos</label>
-				</li>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Jenny Tran</label>
-				</li>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Stanimir Danev</label>
-				</li>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Kaloyan Madzhunov</label>
-				</li>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Marina Lazarova</label>
-				</li>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Nicky Döll</label>
-				</li>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Anna Schneider</label>
-				</li>
-				<li>
-					<input type="checkbox" id="item" name="item">
-					<label for="item" class="text">Le Le</label>
-				</li>
-			</ul>
+			<table id="studentNames">
+				<tr>
+					<td><label for="item1"><input type="checkbox" id="item1" value="1">Peter Lajos</label></td>
+				</tr>
+				<tr>
+					<td><label for="item2"><input type="checkbox" id="item2" value="2">Jenny Tran</label></td>
+				</tr>
+				<tr>
+					<td><label for="item3"><input type="checkbox" id="item3" value="3">Stanimir Danev</label></td>
+				</tr>
+				<tr>
+					<td><label for="item4"><input type="checkbox" id="item4" value="4">Kaloyan Madzhunov</label></td>
+				</tr>
+				<tr>
+					<td><label for="item5"><input type="checkbox" id="item5" value="5">Marina Lazarova</label></td>
+				</tr>
+				<tr>
+					<td><label for="item6"><input type="checkbox" id="item6" value="6">Nicky Döll</label></td>
+				</tr>
+				<tr>
+					<td><label for="item7"><input type="checkbox" id="item7" value="7">Anna Schneider</label></td>
+				</tr>
+				<tr>
+					<td><label for="item8"><input type="checkbox" id="item8" value="8">Le Le</label></td>
+				</tr>
+			</table>
   		</div>
 	</div>
 
@@ -99,8 +91,8 @@
 <!-- Buttons for addin student and removing student from the list -->
 	<nav>
 		<div>
-			<button class="addStudent button"><a href="#">Add to the list</a></button>
-  			<button class="remove button" onclick="removeElement()"><a href="#">Remove from the list</a></button>
+			<button id="add" class="addStudent button" onclick="addStudent()"><a href="#">Add to the list</a></button>
+  			<button id="remove" class="removeStudent button" onclick="removeSelected()"><a href="#">Remove from the list</a></button>
 		</div>
 	</nav>
 </div>
@@ -116,24 +108,19 @@
 			</div>
 			<ul>
 				<li>
-					<input type="checkbox" id="request" name="request">
-					<label>Request</label>
+					<label><input type="checkbox" id="request" name="request">Request</label>
 				</li>
 				<li>
-					<input type="checkbox" id="request" name="request">
-					<label>Request</label>
+					<label><input type="checkbox" id="request" name="request">Request</label>
 				</li>
 				<li>
-					<input type="checkbox" id="request" name="request">
-					<label>Request</label>
+					<label><input type="checkbox" id="request" name="request">Request</label>
 				</li>
 				<li>
-					<input type="checkbox" id="request" name="request">
-					<label>Request</label>
+					<label><input type="checkbox" id="request" name="request">Request</label>
 				</li>
 				<li>
-					<input type="checkbox" id="request" name="request">
-					<label>Request</label>
+					<label><input type="checkbox" id="request" name="request">Request</label>
 				</li>
 			</ul>
 			</br>
@@ -190,6 +177,45 @@ function openScreen(screenName) {
   document.getElementById(screenName).style.display = "block";  
 }
 </script>
+
+<!-- This function displays which checkboxs were selected -->
+<!--<script type="text/javascript">
+    function removeSelected() {
+        //Create an Array.
+        var selected = new Array();
+ 
+        //Reference the Table.
+        var studentNames = document.getElementById("studentNames");
+ 
+        //Reference all the CheckBoxes in Table.
+        var items = studentNames.getElementsByTagName("INPUT");
+ 
+        // Loop and push the checked CheckBox value in Array.
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].checked) {
+                selected.push(items[i].value);
+            }
+        }
+ 
+        //Display the selected CheckBox values.
+        if (selected.length > 0) {
+            alert("Selected values: " + selected.join(","));
+        }
+    };
+</script>-->
+
+<!-- Adding new element to the list -->
+<!--<script type="text/javascript">
+
+document.getElementById("add").onClick = addStudent() {
+
+    var text = document.getElementById("nameOfStudent").value;
+
+    var tr = "<tr><td><label for="item9"><input type="checkbox" id="item9" value="9">" + text + "</label></td></tr>";
+
+    document.getElementById("studentNames").appendChild(tr);
+}
+</script>-->
 
 </body>
 </html>
