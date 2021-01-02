@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="adminstyle.css">
+    <link rel="stylesheet" href="./navbarstyle.css">
+    
+    <!-- jQuery first, then Popper.js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <script src="JS/openscreen.js"></script>
+    <script  src="JS/navbarscript.js"></script>
+
+    <title>PiggyBank - admin</title>
+</head>
+
+
+<body>
+
+<!-- begin class with teacher pig image -->
+    <div class="Piggies">
+        <div class="admin pigimg ">
+            <img src="Images/adminPig.svg " alt="image of the admin Pig ">
+        </div>
+    </div>
+    <!-- end class with teacher pig image -->
+
+<!-- Buttons for selecting the ATM or History screen -->
+   <nav role="navigation">
+    <div class="bank_requests_history_buttons">
+        <button class="bank_requests_history_buttons-item button" onclick="openScreen('Bank')"><a data-page="home" class="active" href="#">Bank</a></button>
+        <span data-text="At Bank you can give and get coins from students." class="tooltip"><img src="Images/infoicon.svg"></span>
+        <button class="bank_requests_history_buttons-item button" onclick="openScreen('Requests')"><a data-page="about" href="#">Requests</a></button>
+        <span data-text="At requests you can give coins and diamonds for teachers." class="tooltip"><img src="Images/infoicon.svg"></span>
+        <button class="bank_requests_history_buttons-item button" onclick="openScreen('History')"><a data-page="about" href="#">History</a></button>
+        <span data-text="At history you can see all of the teachers requests." class="tooltip"><img src="Images/infoicon.svg"></span>
+    </div>
+    </nav>
+ <!-- BUTTON SECTION END -->
+
+<!-- ATM BUTTON SECTION -->
+<div id="Bank" class="container screen">
+
+<!-- Student list -->
+	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Student list</div>
+			</div>
+			<ul>
+				<li>
+					<input type="checkbox" id="item-1" name="item-1">
+					<label for="item-1" class="text">Peter Lajos</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-2" name="item-2">
+					<label for="item-2" class="text">Jenny Tran</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-3" name="item-3">
+					<label for="item-3" class="text">Stanimir Danev</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-4" name="item-4">
+					<label for="item-4" class="text">Kaloyan Madzhunov</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-5" name="item-5">
+					<label for="item-5" class="text">Marina Lazarova</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-6" name="item-6">
+					<label for="item-6" class="text">Nicky Döll</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-7" name="item-7">
+					<label for="item-7" class="text">Anna Schneider</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-8" name="item-8">
+					<label for="item-8" class="text">Le Le</label>
+				</li>
+			</ul>
+  		</div>
+	</div>
+
+<!-- Boxes for define courses and the amount of coins/diamonds you want to give for the selected students -->
+	<div class="amountOfDiamonds">
+		<h2>Diamonds</h2>
+		<div class="diamondInput">
+			<input type="number" id="amountOfD" name="amountOfD">
+		</div>
+	</div>
+	<div class="amountOfCoins">
+		<h2>Coins</h2>
+		<div class="coinInput">
+			<input type="number" id="amountOfC" name="amountOfC">
+		</div>
+	</div>
+
+<!-- Buttons for Deposit, Withdraw and Request -->
+	<nav>
+		<div>
+			<button class="deposit button"><a href="#">Deposit</a></button>
+  			<button class="withdraw button"><a href="#">Withdraw</a></button>
+		</div>
+	</nav>
+</div>
+<!-- END OF ATM BUTTON SECTION -->
+
+<!-- REQUESTS SECTION -->
+
+<div id="Requests" class="container screen" style="display:none">
+  	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Requests</div>
+			</div>
+			<ul>
+				<li>
+					<input type="checkbox" id="item-1" name="item-1">
+					<label>Request</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-2" name="item-2">
+					<label>Request</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-3" name="item-3">
+					<label>Request</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-4" name="item-4">
+					<label>Request</label>
+				</li>
+				<li>
+					<input type="checkbox" id="item-5" name="item-5">
+					<label>Request</label>
+				</li>
+			</ul>
+			</br>
+		</div>
+	</div>
+
+	<nav>
+		<div>
+			<button class="deposit button"><a href="#">Deposit</a></button>
+		</div>
+	</nav>
+</div>
+
+<!-- END OF REQUESTS SECTION -->
+
+<!-- HISTORY BUTTON SECTION -->
+<div id="History" class="container screen" style="display:none">
+  	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Request history</div>
+			</div>
+			<ul>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+			</ul>
+			</br>
+		</div>
+	</div>
+</div>
+<!-- END OF HISTORY BUTTON SECTION -->
+
+<!-- Script for changing between the ATM and History tab -->
+<script>
+function openScreen(screenName) {
+  var i;
+  var x = document.getElementsByClassName("screen");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(screenName).style.display = "block";  
+}
+</script>
+
+</body>
+</html>
