@@ -142,11 +142,35 @@
 		<div>
 			<button class="deposit button"><a href="#">Deposit</a></button>
   			<button class="withdraw button"><a href="#">Withdraw</a></button>
-  			<button class="request button"><a href="#">Request funds</a></button>
+
+  			<div class="popup">
+				<button class="request button" onclick="myFunction()"><a href="#">Request funds</a></button>
+				<div class="popuptext" id="myPopup">
+					<span>How much coins do you need?</span>
+					<div class="coinNeeded">
+						<input class="coinNeeded" type="number" id="amountOfCN" name="amountOfCN">
+					</div>
+					<br>
+					<span>How much diamonds do you need?</span>
+					<div class="diamondNeeded">
+						<input class="diamondNeeded" type="number" id="amountOfDN" name="amountOfDN">
+					</div>
+					<br>
+					<button class="sendRequest"><a href="#">Send</a></button>
+				</div>
+			</div>
 		</div>
 	</nav>
 </div>
 <!-- END OF ATM BUTTON SECTION -->
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
 
 <!-- HISTORY BUTTON SECTION -->
 <div id="History" class="container screen" style="display:none">
