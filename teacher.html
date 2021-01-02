@@ -164,14 +164,6 @@
 </div>
 <!-- END OF ATM BUTTON SECTION -->
 
-<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-</script>
-
 <!-- HISTORY BUTTON SECTION -->
 <div id="History" class="container screen" style="display:none">
   	<div class="frame">
@@ -212,6 +204,14 @@ function openScreen(screenName) {
     x[i].style.display = "none";  
   }
   document.getElementById(screenName).style.display = "block";  
+}
+</script>
+
+<script>
+// When the user clicks on the request fund button, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }
 </script>
 
