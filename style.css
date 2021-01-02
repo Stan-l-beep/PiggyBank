@@ -1,10 +1,18 @@
 /*styling of student*/
 p {
+<<<<<<< HEAD
   display: block;
   margin-block-start: inherit;
   margin-block-end: inherit;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+=======
+    display: block;
+    margin-block-start: inherit;
+    margin-block-end: inherit;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+>>>>>>> master
 }
 body {
   background-image: url("Images/background.svg");
@@ -129,6 +137,7 @@ main {
 	top: 35%;
 	left: 33%;
 }
+/*styling of pigs end*/
 
 .amountOfDiamonds {
 	position: absolute;

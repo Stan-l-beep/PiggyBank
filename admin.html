@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="adminstyle.css">
+    <link rel="stylesheet" href="./navbarstyle.css">
+    
+    <!-- jQuery first, then Popper.js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <script src="JS/openscreen.js"></script>
+    <script  src="JS/navbarscript.js"></script>
+
+    <title>PiggyBank - admin</title>
+</head>
+
+
+<body>
+
+<!-- begin class with teacher pig image -->
+    <div class="Piggies">
+        <div class="admin pigimg ">
+            <img src="Images/adminPig.svg " alt="image of the admin Pig ">
+        </div>
+    </div>
+    <!-- end class with teacher pig image -->
+
+<!-- Buttons for selecting the ATM or History screen -->
+   <nav role="navigation">
+    <div class="bank_requests_history_buttons">
+        <button class="bank_requests_history_buttons-item button" onclick="openScreen('Bank')"><a data-page="home" class="active" href="#">Bank</a></button>
+        <span data-text="At Bank you can give and get coins from students." class="tooltip"><img src="Images/infoicon.svg"></span>
+        <button class="bank_requests_history_buttons-item button" onclick="openScreen('Requests')"><a data-page="about" href="#">Requests</a></button>
+        <span data-text="At requests you can give coins and diamonds for teachers." class="tooltip"><img src="Images/infoicon.svg"></span>
+        <button class="bank_requests_history_buttons-item button" onclick="openScreen('History')"><a data-page="about" href="#">History</a></button>
+        <span data-text="At history you can see all of the teachers requests." class="tooltip"><img src="Images/infoicon.svg"></span>
+    </div>
+    </nav>
+ <!-- BUTTON SECTION END -->
+
+<!-- ATM BUTTON SECTION -->
+<div id="Bank" class="container screen">
+
+<!-- Student list -->
+	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Student list</div>
+			</div>
+			<table id="studentNames">
+				<tr>
+					<td><label for="item1"><input type="checkbox" id="item1" value="1">Peter Lajos</label></td>
+				</tr>
+				<tr>
+					<td><label for="item2"><input type="checkbox" id="item2" value="2">Jenny Tran</label></td>
+				</tr>
+				<tr>
+					<td><label for="item3"><input type="checkbox" id="item3" value="3">Stanimir Danev</label></td>
+				</tr>
+				<tr>
+					<td><label for="item4"><input type="checkbox" id="item4" value="4">Kaloyan Madzhunov</label></td>
+				</tr>
+				<tr>
+					<td><label for="item5"><input type="checkbox" id="item5" value="5">Marina Lazarova</label></td>
+				</tr>
+				<tr>
+					<td><label for="item6"><input type="checkbox" id="item6" value="6">Nicky Döll</label></td>
+				</tr>
+				<tr>
+					<td><label for="item7"><input type="checkbox" id="item7" value="7">Anna Schneider</label></td>
+				</tr>
+				<tr>
+					<td><label for="item8"><input type="checkbox" id="item8" value="8">Le Le</label></td>
+				</tr>
+			</table>
+  		</div>
+	</div>
+
+<!-- Textbox for entering name -->
+	<div class="nameOfStudent">
+		<h2>Name</h2>
+		<div class="diamondInput">
+			<input type="text" id="nameOfStudent" name="nameOfStudent">
+		</div>
+	</div>
+
+<!-- Buttons for addin student and removing student from the list -->
+	<nav>
+		<div>
+			<button id="add" class="addStudent button" onclick="addStudent()"><a href="#">Add to the list</a></button>
+  			<button id="remove" class="removeStudent button" onclick="removeSelected()"><a href="#">Remove from the list</a></button>
+		</div>
+	</nav>
+</div>
+<!-- END OF ATM BUTTON SECTION -->
+
+<!-- REQUESTS SECTION -->
+
+<div id="Requests" class="container screen" style="display:none">
+  	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Requests</div>
+			</div>
+			<ul>
+				<li>
+					<label><input type="checkbox" id="request" name="request">Request</label>
+				</li>
+				<li>
+					<label><input type="checkbox" id="request" name="request">Request</label>
+				</li>
+				<li>
+					<label><input type="checkbox" id="request" name="request">Request</label>
+				</li>
+				<li>
+					<label><input type="checkbox" id="request" name="request">Request</label>
+				</li>
+				<li>
+					<label><input type="checkbox" id="request" name="request">Request</label>
+				</li>
+			</ul>
+			</br>
+		</div>
+	</div>
+
+	<nav>
+		<div>
+			<button class="deposit button"><a href="#">Deposit</a></button>
+		</div>
+	</nav>
+</div>
+
+<!-- END OF REQUESTS SECTION -->
+
+<!-- HISTORY BUTTON SECTION -->
+<div id="History" class="container screen" style="display:none">
+  	<div class="frame">
+  		<div class="list">
+			<div class="head">
+				<div class="title">Request history</div>
+			</div>
+			<ul>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+				<li>
+					<label>Information from your history!</label>
+				</li>
+			</ul>
+			</br>
+		</div>
+	</div>
+</div>
+<!-- END OF HISTORY BUTTON SECTION -->
+
+<!-- Script for changing between the ATM and History tab -->
+<script>
+function openScreen(screenName) {
+  var i;
+  var x = document.getElementsByClassName("screen");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(screenName).style.display = "block";  
+}
+</script>
+
+<!-- This function displays which checkboxs were selected -->
+<!--<script type="text/javascript">
+    function removeSelected() {
+        //Create an Array.
+        var selected = new Array();
+ 
+        //Reference the Table.
+        var studentNames = document.getElementById("studentNames");
+ 
+        //Reference all the CheckBoxes in Table.
+        var items = studentNames.getElementsByTagName("INPUT");
+ 
+        // Loop and push the checked CheckBox value in Array.
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].checked) {
+                selected.push(items[i].value);
+            }
+        }
+ 
+        //Display the selected CheckBox values.
+        if (selected.length > 0) {
+            alert("Selected values: " + selected.join(","));
+        }
+    };
+</script>-->
+
+<!-- Adding new element to the list -->
+<!--<script type="text/javascript">
+
+document.getElementById("add").onClick = addStudent() {
+
+    var text = document.getElementById("nameOfStudent").value;
+
+    var tr = "<tr><td><label for="item9"><input type="checkbox" id="item9" value="9">" + text + "</label></td></tr>";
+
+    document.getElementById("studentNames").appendChild(tr);
+}
+</script>-->
+
+</body>
+</html>
