@@ -19,28 +19,37 @@ body {
   background-size: cover;
 }
 
-/* GoBack Button to index page*/
-.GoBackButton {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.GoBackButton {
-  background-color: #e7e7e7;
-  color: black;
-  border: 2px solid #e7e7e7;
-}
-
-.GoBackButton:hover {background-color: white;}
+.buttonBack {
+    display: flex;
+    flex-dirction: row;
+  }
+  
+  .buttonBack a {
+    left:50%;
+    top:50%;
+    padding: 25px 20px;
+    font-size:15px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.3);
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    display: inline-block;
+  }
+  
+  .buttonBack a:hover, nav a.active {
+    color: #000;
+  }
+  
+  .back_button {
+    color: inherit;
+    border:none;
+    text-align: center;
+    display: inline-block;
+    background: none;
+  }
 
 /*all scoring styling is here */
 .currentScore {
@@ -321,7 +330,7 @@ $main-color: #643A7A;
 .select {
   position: absolute;
   left: 10.5%;
-  top: 180px;
+  top: 140px;
   width: 20vmax;
   display:flex;
   flex-direction: column;
