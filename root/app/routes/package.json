@@ -1,0 +1,20 @@
+{
+  "name": "piggybank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": { 
+       "dev": "nodemon server.js"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.fhict.nl/I428020/piggybank.git"
+  },
+  "keywords": [
+    "Backend"
+  ],
+  "author": "JPS",
+  "license": "ISC"
+}
+
+
