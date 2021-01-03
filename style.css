@@ -49,12 +49,18 @@ main {
 /*all scoring styling ends here*/
 
 /*styling of pigs*/
+.constructionpiggy{
+  position: absolute;
+  top: 191px;
+  left: 10.5%;
+  width: 30%;
+}
+
 .Piggies {
   position: absolute;
-  top: 108px;
-  left: 51.5%;
-  width: 41%;
-  height: 37%;
+  top: 191px;
+  left: 53.5%;
+  width: 30%;
 }
 
 .pigimg {
